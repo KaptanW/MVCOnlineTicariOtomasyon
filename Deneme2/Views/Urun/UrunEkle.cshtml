@@ -1,0 +1,57 @@
+﻿@model MVCOnlineTicariOtomasyon.Models.Siniflar.Urun
+@{
+    ViewBag.Title = "UrunEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="m-4">@ViewBag.Urun</h2>
+
+
+<form class="form-group" method="post">
+    <div class="d-flex row">
+        <div class="mx-1 col-3">
+
+            <label class="h5">Ürünün İsmi</label>
+            @Html.TextBoxFor(x => x.UrunAd, new { @class = "form-control mb-5" })
+        </div>
+        <div class="mx-1 col-3">
+
+            <label class="h5">Ürünün Markası</label>
+            @Html.TextBoxFor(x => x.Marka, new { @class = "form-control mb-5" })
+        </div>
+        <div class="mx-1 col-3">
+
+            <label class="h5">Ürünün Stoğu</label>
+            @Html.TextBoxFor(x => x.Stok, new { @class = "form-control mb-5" })
+        </div>
+        <div class="mx-1 col-3">
+
+            <label class="h5">Ürünün Alış Fiyatı</label>
+            @Html.TextBoxFor(x => x.AlisFiyat, new { @class = "form-control mb-5" })
+        </div>
+        <div class="mx-1 col-3">
+
+            <label class="h5">Ürünün Satış Fiyatı</label>
+            @Html.TextBoxFor(x => x.SatisFiyat, new { @class = "form-control mb-5" })
+        </div>
+        <div class="mx-1 col-3">
+
+            <label class="h5">Ürünün Kategorisi</label>
+            @Html.DropDownListFor(x=>x.Kategoriid,(List<SelectListItem>)ViewBag.KategoriListesi, new { @class = "form-control mb-5" })
+            @*@Html.TextBoxFor(x => x.Kategoriid, new { @class = "form-control  mb-5" })*@
+        </div>
+        <div class="mx-1 col-3">
+
+            <label class="h5">Ürün Görseli</label>
+            @Html.TextBoxFor(x => x.UrunGorsel, new { @class = "form-control  mb-5" })
+        </div>
+        <div class="mx-1 col-3">
+
+            <label class="h5">Ürün Durumu</label>
+            @Html.TextBoxFor(x => x.Durum, new { @class = "form-control  mb-5" })
+        </div>
+        </div>
+
+        @Html.HiddenFor(x => x.UrunId)
+        <button type="submit" class="btn btn-primary my-4" style="width:10%">Ekle</button>
+</form>
