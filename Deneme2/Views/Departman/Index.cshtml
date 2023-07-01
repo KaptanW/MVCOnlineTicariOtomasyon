@@ -1,11 +1,11 @@
 ﻿@using MVCOnlineTicariOtomasyon.Models.Siniflar;
-@model List<Kategori>
+@model List<Departman>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2 class="m-5">Kategori Listesi</h2>
+<h2 class="m-5">Departman Listesi</h2>
 <div class="col-12  border-dark">
 
 
@@ -14,7 +14,7 @@
 
             <tr>
                 <th>ID</th>
-                <th>Kategori Adı</th>
+                <th>Departman Adı</th>
                 <th>Aksiyonlar</th>
             </tr>
         </thead>
@@ -23,19 +23,20 @@
 
             <tr>
                 <td>
-                    @k.KategoriId
+                    @k.Departmanid
                 </td>
                 <td>
-                    @k.KategoriAd
+                    @k.DepartmanAd
                 </td>
                 <td>
-                    <a class="btn btn-success mx-2 text-light" href="/Kategori/KategoriEkle/@k.KategoriId">Güncelle</a>
-                    <a class="btn btn-danger text-light" href="/Kategori/KategoriSil/@k.KategoriId">Sil</a>
+                    <a class="btn btn-success mr-2 text-light" href="/Departman/DepartmanEkle/@k.Departmanid">Güncelle</a>
+                    <a class="btn btn-danger mr-2 text-light" href="/Departman/DepartmanSil/@k.Departmanid">Sil</a>
+                    <a class="btn btn-warning text-light" href="/Departman/DepartmanDetay/@k.Departmanid">Detay</a>
                 </td>
             </tr>
 
         }
     </table>
 
-    <a href="/Kategori/KategoriEkle" class="m-4 btn btn-info">Kategori Ekle</a>
+    <a href="/Departman/DepartmanEkle" class="m-4 btn btn-info">Departman Ekle</a>
 </div>

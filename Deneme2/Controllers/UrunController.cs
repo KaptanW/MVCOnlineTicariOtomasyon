@@ -52,7 +52,14 @@ namespace Deneme2.Controllers
             {
 
                 var eurun = _context.Uruns.Find(urun.UrunId);
-                eurun = urun;
+                eurun.UrunAd = urun.UrunAd;
+                eurun.Marka = urun.Marka;
+                eurun.AlisFiyat = urun.AlisFiyat;
+                eurun.SatisFiyat = urun.SatisFiyat;
+                eurun.Kategoriid = urun.Kategoriid;
+                eurun.Durum = urun.Durum;
+                eurun.Stok = urun.Stok;
+                eurun.UrunGorsel = urun.UrunGorsel;
             }
             _context.SaveChanges();
             return RedirectToAction("Index");
