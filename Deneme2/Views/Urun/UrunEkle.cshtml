@@ -8,50 +8,53 @@
 
 
 <form class="form-group" method="post">
-    <div class="d-flex row">
-        <div class="mx-1 col-3">
+    <div class="d-flex row p-5">
+
+        <div class="px-5  col-5">
 
             <label class="h5">Ürünün İsmi</label>
             @Html.TextBoxFor(x => x.UrunAd, new { @class = "form-control mb-5" })
         </div>
-        <div class="mx-1 col-3">
+        <div class="px-5  col-5">
 
             <label class="h5">Ürünün Markası</label>
             @Html.TextBoxFor(x => x.Marka, new { @class = "form-control mb-5" })
         </div>
-        <div class="mx-1 col-3">
+        <div class="px-5  col-5">
 
             <label class="h5">Ürünün Stoğu</label>
             @Html.TextBoxFor(x => x.Stok, new { @class = "form-control mb-5" })
         </div>
-        <div class="mx-1 col-3">
+        <div class="px-5  col-5">
 
             <label class="h5">Ürünün Alış Fiyatı</label>
             @Html.TextBoxFor(x => x.AlisFiyat, new { @class = "form-control mb-5" })
         </div>
-        <div class="mx-1 col-3">
+        <div class="px-5  col-5">
 
             <label class="h5">Ürünün Satış Fiyatı</label>
             @Html.TextBoxFor(x => x.SatisFiyat, new { @class = "form-control mb-5" })
         </div>
-        <div class="mx-1 col-3">
+        <div class="px-5  col-5">
 
             <label class="h5">Ürünün Kategorisi</label>
-            @Html.DropDownListFor(x=>x.Kategoriid,(List<SelectListItem>)ViewBag.KategoriListesi, new { @class = "form-control mb-5" })
+            @Html.DropDownListFor(x => x.Kategoriid, (List<SelectListItem>)ViewBag.KategoriListesi, new { @class = "form-control mb-5" })
             @*@Html.TextBoxFor(x => x.Kategoriid, new { @class = "form-control  mb-5" })*@
         </div>
-        <div class="mx-1 col-3">
+        <div class="px-5  col-5">
 
             <label class="h5">Ürün Görseli</label>
             @Html.TextBoxFor(x => x.UrunGorsel, new { @class = "form-control  mb-5" })
         </div>
-        <div class="mx-1 col-3">
+        <div class="px-5  col-5">
 
             <label class="h5">Ürün Durumu</label>
             @Html.TextBoxFor(x => x.Durum, new { @class = "form-control  mb-5" })
         </div>
-        </div>
+    </div>
+    <div class="ml-5 px-5">
+        <button type="submit" class="btn btn-primary" style="width:10%">Ekle</button>
 
-        @Html.HiddenFor(x => x.UrunId)
-        <button type="submit" class="btn btn-primary my-4" style="width:10%">Ekle</button>
+    </div>
+    @Html.HiddenFor(x => x.UrunId)
 </form>

@@ -1,0 +1,58 @@
+﻿@model MVCOnlineTicariOtomasyon.Models.Siniflar.Faturalar
+@{
+    ViewBag.Title = "FaturaEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="m-4">@ViewBag.fatura</h2>
+
+
+<form class="form-group" method="post">
+    <div class="d-flex row p-5">
+
+        <div class="px-5  col-5">
+
+            <label class="h5">Seri No</label>
+            @Html.TextBoxFor(x => x.FaturaSeriNo, new { @class = "form-control mb-5" })
+        </div>
+        <div class="px-5  col-5">
+
+            <label class="h5">Sıra No</label>
+            @Html.TextBoxFor(x => x.FaturaSıraNo, new { @class = "form-control mb-5" })
+        </div>
+        <div class="px-5  col-5">
+
+            <label class="h5">Tarih</label>
+            @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control mb-5" })
+        </div>
+        <div class="px-5  col-5">
+
+            <label class="h5">Saat</label>
+            @Html.TextBoxFor(x => x.Saat, new { @class = "form-control mb-5" })
+        </div>
+        <div class="px-5  col-5">
+
+            <label class="h5">Vergi Dairesi</label>
+            @Html.TextBoxFor(x => x.VergiDairesi, new { @class = "form-control mb-5" })
+        </div>
+        <div class="px-5  col-5">
+
+            <label class="h5">Teslim Eden</label>
+            @Html.TextBoxFor(x => x.TeslimEden, new { @class = "form-control mb-5" })
+        </div>
+        <div class="px-5  col-5">
+
+            <label class="h5">Teslim Alan</label>
+            @Html.TextBoxFor(x => x.TeslimAlan, new { @class = "form-control  mb-5" })
+        </div>
+        <div class="px-5  col-5">
+
+            <label class="h5">Toplam</label>
+            @Html.TextBoxFor(x => x.Toplam, new { @class = "form-control  mb-5" })
+        </div>
+    </div>
+    <div class="ml-5 px-5">
+        <button type="submit" class="btn btn-primary" style="width:10%">Ekle</button>
+    </div>
+    @Html.HiddenFor(x => x.FaturaId)
+</form>

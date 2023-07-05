@@ -37,7 +37,7 @@ namespace Deneme2.Controllers
         {
             if (k.Departmanid == 0)
             {
-
+                k.Durum = true;
                 _context.Departmans.Add(k);
             }
             else
@@ -49,6 +49,32 @@ namespace Deneme2.Controllers
             }
             _context.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public ActionResult DepartmanSil(int id)
+        {
+            var depart = _context.Departmans.Find(id);
+            depart.Durum = false;
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult DepartmanDetay(int id)
+        {
+            var dep = _context.Departmans.Find(id);
+            ViewBag.DepartmanId = dep.Departmanid;
+            ViewBag.DepartmanAd = dep.DepartmanAd;
+            var degerler = _context.Personels.Where(x => x.Departmanid == id).ToList();
+            return View(degerler);
+        }
+
+        public ActionResult DepartmanPersonelSatis(int id)
+        {
+            var personel = _context.Personels.Find(id);
+            ViewBag.Personelid = personel.PersonelId;
+            ViewBag.PersonelAd = personel.PersonelAd + " " + personel.PersonelSoyad;
+            var degerler = _context.satisHarakets.Where(x=>x.Personelid == id).ToList();
+            return View(degerler);
         }
 
     }

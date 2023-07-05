@@ -72,5 +72,11 @@ namespace Deneme2.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult UrunListesi()
+        {
+            var degerler = _context.Uruns.ToList();
+            return View(degerler);
+        }
     }
 }

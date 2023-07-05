@@ -8,8 +8,18 @@
 <h2 class="m-4">@ViewBag.Departman</h2>
 
 <form class="form-group" method="post">
-    <label class="h4">Departman İsmi</label>
-    @Html.TextBoxFor(x => x.DepartmanAd, new { @class = "form-control w-25" })
+    <div class="d-flex row p-5">
+
+        <div class="px-5  col-12">
+            <label class="h5">Departman İsmi</label>
+            @Html.TextBoxFor(x => x.DepartmanAd, new { @class = "form-control w-25" })
+        </div>
+    </div>
+
+    <div class="ml-5 px-5">
+        <button type="submit" class="btn btn-primary" style="width:10%">Ekle</button>
+
+    </div>
+
     @Html.HiddenFor(x => x.Departmanid)
-    <button type="submit" class="btn btn-primary  my-4">Ekle</button>
 </form>

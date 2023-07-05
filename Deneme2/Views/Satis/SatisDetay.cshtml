@@ -1,0 +1,63 @@
+﻿@using MVCOnlineTicariOtomasyon.Models.Siniflar;
+@model List<SatisHaraket>
+@{
+    ViewBag.Title = "SatisDetay";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="m-5"> Satış Detayları</h2>
+
+<div class="col-12  border-dark">
+
+    <table class="table  table-striped table-hover table-light  m-4">
+        <thead class="thead-dark border-dark">
+
+            <tr>
+                <th>ID</th>
+                <th>Tarih</th>
+                <th>Carinin Adı</th>
+                <th>Ürün</th>
+                <th>Fiyat</th>
+                <th>Toplam Tutar</th>
+                <th>Personel</th>
+                <th>Aksiyon</th>
+            </tr>
+        </thead>
+        @foreach (var p in Model)
+        {
+
+            <tr>
+                <td>
+                    @p.Personelid
+                </td>
+                <td>
+                    @p.Tarih.ToString("MM-yyyy")
+                </td>
+                <td>
+                    @(p.Cariler.CariAd +" "+p.Cariler.CariSoyad)
+                </td>
+                <td>
+                    @p.Urun.UrunAd
+                </td>
+                <td>
+                    @p.Fiyat.ToString("C0")
+                </td>
+                <td>
+                    @p.ToplamTutar.ToString("C0")
+                </td>
+                <td>
+                    @p.Personel.PersonelAd @p.Personel.PersonelSoyad
+                </td>
+                <td>
+
+                    <a href="" class="btn btn-dark">Yazdır</a>
+                </td>
+            </tr>
+
+        }
+    </table>
+
+</div>
+<div class="m-5">
+    @Html.ActionLink("Geri Dön", "Index", null, new { @class = "btn btn-success mr-2 text-light" })
+</div>

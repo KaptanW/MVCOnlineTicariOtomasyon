@@ -1,0 +1,40 @@
+﻿@model MVCOnlineTicariOtomasyon.Models.Siniflar.Personel
+@{
+    ViewBag.Title = "PersonelEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="m-4">@ViewBag.Personel</h2>
+
+
+<form class="form-group" method="post">
+    <div class="d-flex row p-5">
+
+        <div class="px-5  col-5">
+
+            <label class="h5">İsim</label>
+            @Html.TextBoxFor(x => x.PersonelAd, new { @class = "form-control mb-5" })
+        </div>
+        <div class="px-5  col-5">
+
+            <label class="h5">Soyad</label>
+            @Html.TextBoxFor(x => x.PersonelSoyad, new { @class = "form-control mb-5" })
+        </div>
+        <div class="px-5  col-5">
+
+            <label class="h5">Görsel</label>
+            @Html.TextBoxFor(x => x.PersonelGorsel, new { @class = "form-control mb-5" })
+        </div>
+        <div class="px-5  col-5">
+
+            <label class="h5">Departman</label>
+            @Html.DropDownListFor(x => x.Departmanid, (List<SelectListItem>)ViewBag.Departmanlistesi, new { @class = "form-control mb-5" })
+        </div>
+        
+    </div>
+    <div class="ml-5 px-5">
+        <button type="submit" class="btn btn-primary" style="width:10%">Ekle</button>
+
+    </div>
+    @Html.HiddenFor(x => x.PersonelId)
+</form>
