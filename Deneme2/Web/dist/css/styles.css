@@ -41,6 +41,10 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+.urundetay{
+    height:300px;
+}
+
 *,
 *::before,
 *::after {
@@ -1486,10 +1490,14 @@ pre code {
     max-width: 33.3333333333%;
   }
 
-  .row-cols-xl-4 > * {
-    flex: 0 0 25%;
-    max-width: 25%;
-  }
+    .urundetay{
+        width:300px;
+    }
+
+    .row-cols-xl-4 > * {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
 
   .row-cols-xl-5 > * {
     flex: 0 0 20%;

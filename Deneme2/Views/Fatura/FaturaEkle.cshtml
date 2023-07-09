@@ -1,4 +1,5 @@
-﻿@model MVCOnlineTicariOtomasyon.Models.Siniflar.Faturalar
+﻿@using MVCOnlineTicariOtomasyon.Controllers
+@model MVCOnlineTicariOtomasyon.Models.Siniflar.Faturalar
 @{
     ViewBag.Title = "FaturaEkle";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -51,8 +52,23 @@
             @Html.TextBoxFor(x => x.Toplam, new { @class = "form-control  mb-5" })
         </div>
     </div>
+    <div class="px-5 mb-5">
+        @{
+
+            if (ViewBag.faturadetay)
+            {
+
+                @Html.Action("FaturaDetay", Html.ValueFor(x => x.FaturaId));
+                <a class="btn btn-warning" href="/Fatura/FaturaKalemEkle/@Html.ValueFor(x=>x.FaturaId)">Fatura Detayı Ekle</a>
+            };
+        }
+
+    </div>
     <div class="ml-5 px-5">
+
         <button type="submit" class="btn btn-primary" style="width:10%">Ekle</button>
     </div>
     @Html.HiddenFor(x => x.FaturaId)
+
 </form>
+

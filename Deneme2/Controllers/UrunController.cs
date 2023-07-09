@@ -78,5 +78,11 @@ namespace Deneme2.Controllers
             var degerler = _context.Uruns.ToList();
             return View(degerler);
         }
+
+        [HttpGet]
+        public ActionResult UrunDetay(int id)
+        {
+            return View(_context.Uruns.Find(id));
+        }
     }
 }

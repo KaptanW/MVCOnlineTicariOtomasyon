@@ -18,3 +18,7 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.urundetay{
+    width:300px;
+}

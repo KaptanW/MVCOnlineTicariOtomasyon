@@ -1,0 +1,54 @@
+﻿@model MVCOnlineTicariOtomasyon.Models.Siniflar.Urun
+
+@{
+    ViewBag.Title = "UrunDetay";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="mx-2 mt-5 row">
+
+    <h1 class="display-3    ">@Html.DisplayFor(x => x.Marka) @Html.DisplayFor(x => x.UrunAd)</h1>
+    <hr />
+    <div class="d-flex">
+        <img src="~/Content/images/@Html.ValueFor(x=>x.UrunGorsel)" class="w-50" />
+        <div class="mx-5 col-6">
+            <div class="m-3">
+                <h3>Ürün Açıklaması</h3>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum reru</p>
+            </div>
+            <hr />
+            <div class="d-flex ">
+                
+                <div class="m-3">
+                    <h3> Kategori </h3>
+                    <p>@Html.DisplayFor(x => x.Kategori.KategoriAd)</p>
+
+                </div>
+                <div class="m-3">
+
+                    <h3> Marka </h3>
+                    <p>@Html.DisplayFor(x => x.Marka)</p>
+                </div>
+            </div>
+            <hr />
+            <div class="d-flex p-2">
+
+                <div class="m-2">
+                    <h3>Stok Durumu</h3> @Html.DisplayFor(x => x.Stok) <p>Adet Stokta Mevcut</p>
+                </div>
+                <div class="m-2">
+                    <h3 class="">Alış Fiyatı</h3> @Html.DisplayFor(x => x.AlisFiyat) <p> Türk Lirası</p>
+                </div>
+                <div class="m-2">
+                    <h3 class=""> Satış Fiyatı</h3> @Html.DisplayFor(x => x.SatisFiyat)  <p> Türk Lirası</p>
+                </div>
+            </div>
+
+            <p class="m-3">
+                @Html.ActionLink("Güncelle", "UrunEkle", new { id = Model.UrunId },new {@class = "btn btn-warning mr-4"}) 
+                @Html.ActionLink("Geri Dön", "Index",null, new { @class = "btn btn-info" })
+            </p>
+
+        </div>
+    </div>
+</div>
