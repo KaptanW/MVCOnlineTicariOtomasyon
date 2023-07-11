@@ -1,4 +1,5 @@
-![image](https://github.com/KaptanW/MVCOnlineTicariOtomasyon/assets/102242503/0bd5dd5c-c5cc-4de4-9b93-92ad6b4f38eb)
+
+![aspnet](https://github.com/KaptanW/MVCOnlineTicariOtomasyon/assets/102242503/3da2a75d-ea63-4b20-9d51-526577724a35)
 
 <h1 align="center">Merhabalar</h1>
 <h4>Murat Yücedağ Hocamızın Asp.Net Mvc5 ile Online Ticari Otomasyon dersi ile beraber yürüttüğüm e-ticaret admin paneli. Admin panelini ASP.Net MVC teknolojisini ve MSSQL veritabanını kullanarak geliştirdim. 
