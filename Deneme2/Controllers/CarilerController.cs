@@ -9,7 +9,7 @@ namespace Deneme2.Controllers
     public class CarilerController : Controller
     {
         Context _context = new Context();
-        
+
         // GET: Cariler
         public ActionResult Index()
         {

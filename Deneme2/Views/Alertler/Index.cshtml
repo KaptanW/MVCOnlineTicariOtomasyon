@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="container m-4">
+    <btn class="btn btn-success mx-4" id="btn1">Success</btn>
+
+    <btn class="btn btn-warning mx-4" id="btn2">Warning</btn>
+    <btn class="btn btn-danger mx-4" id="btn3">Danger</btn>
+    <btn class="btn btn-primary mx-4" id="btn4">Info</btn>
+</div>
+
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script>
+    $("#btn2").click(function () {
+        swal("Good job!", "You clicked the button!", "warning");
+    });
+    $("#btn1").click(function () {
+        swal("Good job!", "You clicked the button!", "success");
+    });
+    $("#btn3").click(function () {
+        swal("Good job!", "You clicked the button!", "error");
+    });
+    $("#btn4").click(function () {
+        swal("Good job!", "You clicked the button!", "info");
+    });
+</script>

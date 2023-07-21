@@ -1,0 +1,17 @@
+﻿.form-control:focus {
+    border-color: #27282b;
+    box-shadow: 0 0 0 0.2rem rgb(38 39 41 / 25%);
+}
+
+.container-fluid .btn {
+    font-size: 20px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.list-group-item:hover{
+    transform: scale(1.1)
+}
+

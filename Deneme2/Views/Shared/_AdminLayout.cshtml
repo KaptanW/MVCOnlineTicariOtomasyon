@@ -71,6 +71,10 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-street-view"></i></div>
                             Personeller
                         </a>
+                        <a class="nav-link" href="/Personel/detaylıpersonel">
+                            <div class="sb-nav-link-icon"><i class="fas fa-street-view"></i></div>
+                            Personeller2
+                        </a>
                         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                             <div class="sb-nav-link-icon"><i class="fas fa-lock"></i></div>
                             Admin
@@ -107,12 +111,20 @@
                             Fatura Kalemleri
                         </a>
                         <a class="nav-link" href="index.html">
-                            <div class="sb-nav-link-icon"><i class="fas fa-gift"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-pie"></i></div>
                             Giderler
+                        </a>
+                        <a class="nav-link" href="/Kargo/Index">
+                            <div class="sb-nav-link-icon"><i class="fas fa-truck"></i></div>
+                            Kargolar
                         </a>
                         <a class="nav-link" href="/Urun/UrunListesi">
                             <div class="sb-nav-link-icon"><i class="fas fa-print"></i></div>
                             Pdf & Excel
+                        </a>
+                        <a class="nav-link" href="/Alertler/Index">
+                            <div class="sb-nav-link-icon"><i class="fas fa-print"></i></div>
+                            Alertler
                         </a>
                         <a class="nav-link" href="/istatistik/Index">
                             <div class="sb-nav-link-icon"><i class="fas fa-database"></i></div>
@@ -133,7 +145,7 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid">
-                   @RenderBody()
+                    @RenderBody()
                 </div>
             </main>
             <footer class="py-4 bg-light mt-auto">
@@ -153,5 +165,38 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="~/Web/dist/js/scripts.js"></script>
+    <script src="~/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="~/AdminLTE-3.0.4/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="~/AdminLTE-3.0.4/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ChartJS -->
+    <script src="~/AdminLTE-3.0.4/plugins/chart.js/Chart.min.js"></script>
+    <!-- Sparkline -->
+    <script src="~/AdminLTE-3.0.4/plugins/sparklines/sparkline.js"></script>
+    <!-- JQVMap -->
+    <script src="~/AdminLTE-3.0.4/plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="~/AdminLTE-3.0.4/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="~/AdminLTE-3.0.4/plugins/moment/moment.min.js"></script>
+    <script src="~/AdminLTE-3.0.4/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="~/AdminLTE-3.0.4/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Summernote -->
+    <script src="~/AdminLTE-3.0.4/plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="~/AdminLTE-3.0.4/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/AdminLTE-3.0.4/dist/js/adminlte.js"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="~/AdminLTE-3.0.4/dist/js/pages/dashboard.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="~/AdminLTE-3.0.4/dist/js/demo.js"></script>
 </body>
 </html>

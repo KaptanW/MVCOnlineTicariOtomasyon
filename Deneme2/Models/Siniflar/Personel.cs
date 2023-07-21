@@ -17,6 +17,15 @@ namespace MVCOnlineTicariOtomasyon.Models.Siniflar
         [Column(TypeName = "VarChar")]
         [StringLength(30)]
         public string PersonelSoyad { get; set; }
+        [Column(TypeName ="VarChar")]
+        [StringLength(400)]
+        public string PersonelAdres { get; set; }
+        [Column(TypeName ="VarChar")]
+        [StringLength(400)]
+        public string PersonelAciklama { get; set; }
+        [Column(TypeName ="VarChar")]
+        [StringLength(15)]
+        public string PersonelTelefon { get; set; }
         [Column(TypeName = "VarChar")]
         [StringLength(250)]
         public string PersonelGorsel { get; set; }

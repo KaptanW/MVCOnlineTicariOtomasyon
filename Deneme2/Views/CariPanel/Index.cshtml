@@ -1,0 +1,40 @@
+﻿@model MVCOnlineTicariOtomasyon.Models.Siniflar.Cariler
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_CariLayout.cshtml";
+}
+
+<h2 class="m-4 display-3">Profilim</h2>
+<div class="container-fluid">
+
+
+    @using (Html.BeginForm("CariEkle", "CariPanel", FormMethod.Post))
+    {
+        <div class="row">
+            <div class="col-4 m-3">
+                <h4>Mail</h4>
+                @Html.TextBoxFor(x => x.CariMail, new {@class = "form-control"})
+            </div>
+            <div class="col-4 m-3">
+                <h4>Şifre</h4>
+                @Html.TextBoxFor(x => x.CariSifre, new {@class = "form-control"})
+            </div>
+            <div class="col-4 m-3">
+                <h4>Ad</h4>
+                @Html.TextBoxFor(x => x.CariAd, new {@class = "form-control"})
+            </div>
+            <div class="col-4 m-3">
+                <h4>Soyad</h4>
+                @Html.TextBoxFor(x => x.CariSoyad, new {@class = "form-control"})
+            </div>
+            <div class="col-4 m-3">
+                <h4>Şehir</h4>
+                @Html.TextBoxFor(x => x.CariSehir, new {@class = "form-control"})
+            </div>
+        </div>
+        <button class="btn btn-warning m-3">Bilgilerimi Güncelle</button>
+    }
+
+
+
+</div>

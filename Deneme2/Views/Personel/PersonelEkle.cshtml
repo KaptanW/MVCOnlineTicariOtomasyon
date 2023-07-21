@@ -6,6 +6,8 @@
 
 <h2 class="m-4">@ViewBag.Personel</h2>
 
+@using (Html.BeginForm("PersonelEkle", "Personel", FormMethod.Post, new {enctype = "multipart/form-data" }))
+            {
 
 <form class="form-group" method="post">
     <div class="d-flex row p-5">
@@ -23,7 +25,22 @@
         <div class="px-5  col-5">
 
             <label class="h5">Görsel</label>
-            @Html.TextBoxFor(x => x.PersonelGorsel, new { @class = "form-control mb-5" })
+            <input class="custom-file" type="file" name="PersonelGorsel" />
+        </div>
+        <div class="px-5  col-5">
+
+            <label class="h5">Adres</label>
+            @Html.TextBoxFor(x => x.PersonelAdres, new { @class = "form-control mb-5" })
+        </div>
+        <div class="px-5  col-5">
+
+            <label class="h5">Telefon</label>
+            @Html.TextBoxFor(x => x.PersonelTelefon, new { @class = "form-control mb-5" })
+        </div>
+        <div class="px-5  col-5">
+
+            <label class="h5">Açıklama</label>
+            @Html.TextAreaFor(x => x.PersonelAciklama, new { @class = "form-control mb-5" })
         </div>
         <div class="px-5  col-5">
 
@@ -34,7 +51,7 @@
     </div>
     <div class="ml-5 px-5">
         <button type="submit" class="btn btn-primary" style="width:10%">Ekle</button>
-
     </div>
     @Html.HiddenFor(x => x.PersonelId)
 </form>
+}

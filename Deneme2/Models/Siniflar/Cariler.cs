@@ -25,6 +25,10 @@ namespace MVCOnlineTicariOtomasyon.Models.Siniflar
         [StringLength(50)]
         public string CariMail { get; set; }
 
+        [Column(TypeName = "VarChar")]
+        [StringLength(20)]
+        public string CariSifre { get; set; }
+
         public bool Durum { get; set; }
         public ICollection<SatisHaraket> SatisHarakets { get; set; }
     }

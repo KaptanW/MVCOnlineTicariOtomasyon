@@ -1,0 +1,47 @@
+﻿@model MVCOnlineTicariOtomasyon.Models.Siniflar.Kargodetay
+
+@{
+    ViewBag.Title = ViewBag.kargo;
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h2 class="m-4">@ViewBag.kargo</h2>
+
+
+<form class="form-group" method="post">
+    <div class="d-flex row  p-5">
+        <div class="px-5  col-5 mb-5">
+
+            @Html.HiddenFor(x => x.KargoDetayid)
+            <label class="h5">Aciklama</label>
+            @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control " })
+        </div>
+        <div class="px-5  col-5 mb-5">
+
+            <label class="h5">Alici</label>
+            @Html.TextBoxFor(x => x.Alici, new { @class = "form-control " })
+        </div>
+        <div class="px-5  col-5 mb-5">
+
+            <label class="h5">Personel</label>
+            @Html.TextBoxFor(x => x.Personel, new { @class = "form-control " })
+        </div>
+        <div class="px-5  col-5 mb-5">
+
+            <label class="h5">Tarih</label>
+            <input class="form-control" type="date" name="Tarih" />
+        </div>
+        <div class="px-5  col-5 mb-5">
+            <label class="h5">Takip Kodu</label>
+            <input type="text" readonly value="@ViewBag.kod"  class="form-control"  name="TakipKodu" />
+        </div>
+
+    </div>
+
+    <div class="ml-5 p-5">
+
+        <button type="submit" class="btn btn-primary mr-5" style="width:10%">Ekle</button>
+        @Html.ActionLink("Geri Dön", "Index", null, new { @class = "btn btn-success mr-2 text-light", style = "width:10%" })
+    </div>
+</form>
