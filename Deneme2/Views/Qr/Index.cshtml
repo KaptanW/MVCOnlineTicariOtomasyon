@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid m-5">
+    <div>
+        @using (Html.BeginForm("Index", "Qr", FormMethod.Post)) { 
+        <p class="display-4">Karekod Oluştur</p>
+        <input type="text" name="kod" class="form-control w-25"/>
+        <input type="submit" class="btn btn-primary mt-5" value="QR Oluştur" />
+        }
+
+
+        @if(ViewBag.karekodimage != null)
+            {
+                <img src="@ViewBag.karekodimage" alt="QR" style="width:400px; height:400px" />
+            }
+    </div>
+</div>

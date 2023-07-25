@@ -53,6 +53,10 @@
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="QRCoder, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\QRCoder.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -132,12 +136,14 @@
     <Compile Include="Controllers\CariPanelController.cs" />
     <Compile Include="Controllers\DepartmanController.cs" />
     <Compile Include="Controllers\FaturaController.cs" />
+    <Compile Include="Controllers\GrafikController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\istatistikController.cs" />
     <Compile Include="Controllers\KargoController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PersonelController.cs" />
+    <Compile Include="Controllers\QrController.cs" />
     <Compile Include="Controllers\SatisController.cs" />
     <Compile Include="Controllers\UrunController.cs" />
     <Compile Include="Global.asax.cs">
@@ -2766,6 +2772,8 @@
     <Content Include="Views\Alertler\Index.cshtml" />
     <Content Include="Views\Kargo\Index.cshtml" />
     <Content Include="Views\Kargo\KargoEkle.cshtml" />
+    <Content Include="Views\Qr\Index.cshtml" />
+    <Content Include="Views\Grafik\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
